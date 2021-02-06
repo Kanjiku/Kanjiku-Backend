@@ -52,6 +52,18 @@ Artist
 reading style
 ```
 ---
+` DELETE /manga/"url_friendly_name" `
+* session cookie
+* Manga id or url friendly
+```
+Description
+Thumbnail
+Name
+Author
+Artist
+reading style
+```
+---
 ### Chapters
 ` GET /manga/"url_friendly_name"/"chapter_number"`
 * session cookie
@@ -88,4 +100,11 @@ Release Date (optional default is now())
 Hidden (optional default is visible)
 ```
 ---
-
+` POST /manga/"url_friendly_name"/TAGS`
+* session cookie
+* TAG Id
+---
+` DELETE /manga/"url_friendly_name"/TAGS`
+* session cookie
+* TAG Id
+---
