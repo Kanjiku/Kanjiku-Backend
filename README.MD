@@ -100,6 +100,7 @@ Release Date (optional default is now())
 Hidden (optional default is visible)
 ```
 ---
+### TAGS(Mangas)
 ` POST /manga/"url_friendly_name"/TAGS`
 * session cookie
 * TAG Id
@@ -107,4 +108,21 @@ Hidden (optional default is visible)
 ` DELETE /manga/"url_friendly_name"/TAGS`
 * session cookie
 * TAG Id
+---
+### TAGS
+` GET /tags`
+* returns list of tags
+---
+` POST /tags/new`
+* session cookie
+* Tag Object
+```
+Tag Name
+```
+---
+` Delete /tags/"TAGNAME"/delete`
+* session cookie
+---
+` GET /tags/"TAGNAME"`
+* returns List of Mangas tagged with tags
 ---
