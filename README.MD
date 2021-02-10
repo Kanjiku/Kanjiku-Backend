@@ -15,9 +15,7 @@ url_friendly_name
 ```
 Description
 Chapters
-  - Chapter Names
-  - Volume
-  - Chapter Number
+  - id
 if user token was specified hidden mangas can be seen too
 ```
 ---
@@ -69,6 +67,7 @@ reading style
 * session cookie
 * returns following stuff
 ```
+List of Teams who worked on it
 Total Page Count
 List
   Pagenumber
@@ -102,6 +101,7 @@ Hidden (optional default is visible)
 ---
 ### TAGS(Mangas)
 ` POST /manga/"url_friendly_name"/TAGS`
+add tag to manga
 * session cookie
 * TAG Id
 ---
@@ -120,9 +120,53 @@ Hidden (optional default is visible)
 Tag Name
 ```
 ---
-` Delete /tags/"TAGNAME"/delete`
+` Delete /tags/"TAGNAME"`
 * session cookie
 ---
 ` GET /tags/"TAGNAME"`
 * returns List of Mangas tagged with tags
 ---
+### Config
+` GET /config`
+*returns page Language
+*api version
+*default theme
+*themes allowed
+*num of last chapters
+*logo path
+*site/group name
+---
+` POST /config/logo `
+*change main logo
+---
+### Groups
+` GET /Team`
+*returns list of Team Object
+```
+ID
+Name
+Logo
+Partner
+```
+---
+` GET /Team/<id>`
+*returns list of Team Object
+```
+List of mangas the group worked on
+Description
+partner
+link
+
+```
+` POST /Team/new`
+* returns status
+* requires Session cookie
+* requires Team Object
+```
+Team Name
+Website
+Partner Status
+Description
+
+```
+
