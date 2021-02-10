@@ -128,13 +128,13 @@ Tag Name
 ---
 ### Config
 ` GET /config`
-*returns page Language
-*api version
-*default theme
-*themes allowed
-*num of last chapters
-*logo path
-*site/group name
+* returns page Language
+* api version
+* default theme
+* themes allowed
+* num of last chapters
+* logo path
+* site/group name
 ---
 ` POST /config/logo `
 *change main logo
