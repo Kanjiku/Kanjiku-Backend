@@ -14,6 +14,7 @@ url_friendly_name
 * returns List with following content
 ```
 Description
+tags
 Chapters
   - id
 if user token was specified hidden mangas can be seen too
@@ -169,4 +170,51 @@ Partner Status
 Description
 
 ```
+### User
+` GET /user`
+*returns list of Users
+```
+ID
+Name
+URL of profile Pic
+list of role ids
+```
+---
+` GET /user/<id>`
+*returns User attributes
+```
+Name
+Birthday
+Bio
+Profile pic URL
+list of role ids
+Reading History
 
+```
+` POST /register`
+* returns status
+* requires no Session Cookie
+* requires User Object
+```
+Name
+Password
+Password Confirmation
+Email
+Bio
+Profile Pic
+Reading history public oder private
+
+```
+` PUT /user/<id>`
+* returns status
+* requires Session Cookie
+* requires User Object
+```
+Password
+Password Confirmation
+Email
+Bio
+Profile Pic
+Reading history public oder private
+
+```
